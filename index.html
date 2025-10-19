@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Sorting Visualizer</h1>
+
+  
+  <div class="controls">
+    <div class="control-item">
+      <label for="sizeSlider">Array Size:</label>
+      <input type="range" id="sizeSlider" min="5" max="100" value="25" oninput="updateArraySize(this.value)">
+      <span id="sizeValue">25</span>
+    </div>
+
+    <div class="control-item">
+      <label for="speedSlider">Sorting Speed:</label>
+      <input type="range" id="speedSlider" min="1" max="10" value="5" oninput="updateSortingSpeed(this.value)">
+      <span id="sortingSpeedValue">5</span>
+    </div>
+
+    <button onclick="generateArray(document.getElementById('sizeSlider').value)">Generate New Array</button>
+  </div>
+
+  
+  <div class="controls">
+    <button onclick="bubbleSort()">Bubble Sort</button>
+    <button onclick="insertionSort()">Insertion Sort</button>
+    <button onclick="startMergeSort()">Merge Sort</button>
+  </div>
+
+  
+  <div class="bars-container"></div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
